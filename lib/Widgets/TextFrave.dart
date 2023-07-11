@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class TextFrave extends StatelessWidget {
-
   final String text;
   final double fontSize;
   final bool isTitle;
@@ -14,23 +12,23 @@ class TextFrave extends StatelessWidget {
   final double? letterSpacing;
 
   const TextFrave({
-    Key? key, 
+    Key? key,
     required this.text,
-    this.fontSize = 16,
+    this.fontSize = 24,
     this.fontWeight = FontWeight.normal,
     this.color = Colors.black,
     this.maxLines = 1,
     this.overflow = TextOverflow.visible,
-    this.textAlign = TextAlign.left,
+    this.textAlign = TextAlign.center,
     this.letterSpacing,
     this.isTitle = false,
   });
 
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Text(
       text,
-      style: GoogleFonts.getFont( isTitle ? 'Poppins' : 'Roboto', fontSize: fontSize, fontWeight: fontWeight, color: color, letterSpacing: letterSpacing),
+      style: TextStyle(color: color),
       maxLines: maxLines,
       overflow: overflow,
       textAlign: textAlign,
